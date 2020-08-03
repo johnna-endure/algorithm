@@ -1,4 +1,4 @@
-package backjoon.p2941;
+package backjoon.implementation.p2941;
 
 import java.io.BufferedReader;
 import java.io.IOException;
