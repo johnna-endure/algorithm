@@ -56,7 +56,6 @@ public class KMPReader {
 		if(begin > text.length()-pattern.length() || comparing > pattern.length()) return;
 		int current = begin + comparing;
 		while(comparing < pattern.length()) {
-			System.out.format("비교전 begin : %d, comparing : %d, matched : %d\n", begin, comparing, matched);
 			//일치하는 경우
 			if(text.charAt(current) == pattern.charAt(comparing)) {
 				matched++;
@@ -65,14 +64,11 @@ public class KMPReader {
 					ret.add(begin);
 
 					if(comparing == 0) {
-						System.out.format("바로찾음 begin : %d, comparing : %d, matched : %d\n\n", begin, comparing, matched);
 						searchLoop(current+1,0,0,ret); return;
 					}
 
 					int next_begin = current-piArray[comparing];
 					int delta = next_begin - begin;
-					System.out.format("찾음 begin : %d, comparing : %d, matched : %d\n\n",
-							current-piArray[comparing-1], comparing - delta, piArray[comparing]);
 					searchLoop(current-piArray[comparing-1], comparing - delta, piArray[comparing], ret); return;
 				}
 				comparing++;
@@ -81,12 +77,10 @@ public class KMPReader {
 			}
 			//일치하지 않는 경우
 			if(begin == current) {
-				System.out.format("바로틀림 begin : %d, comparing : %d, matched : %d\n\n", begin, comparing, matched);
 				searchLoop(begin+1,0,0,ret); return;
 			}
 			int next_begin = current - piArray[comparing-1];
 			int delta = next_begin - begin;
-			System.out.format("틀림 begin : %d, comparing : %d, matched : %d\n\n", begin, comparing, matched);
 			searchLoop(next_begin, comparing - delta, piArray[comparing-1], ret); return;
 		}
 
