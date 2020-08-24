@@ -8,5 +8,6 @@ public class MathTest {
 
 	@Test
 	public void testSquare(){
+	    System.out.println(200000 * 200000);
 	}
 }
