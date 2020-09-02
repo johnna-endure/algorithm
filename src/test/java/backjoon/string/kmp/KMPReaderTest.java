@@ -1,16 +1,11 @@
 package backjoon.string.kmp;
 
 import backjoon.string.kmp.p1786.KMPReader;
-import backjoon.string.kmp.p1786.Main;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class KMPReaderTest {
-
 
 	@Test
 	public void setPiArrayTest() {

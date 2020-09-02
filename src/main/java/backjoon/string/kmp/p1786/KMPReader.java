@@ -6,7 +6,6 @@ import java.util.List;
 /*
 pi : 문자열에서 집두사 , 접미사가 일치하는 최대 길이. 문자열 전체 제외.
  */
-
 public class KMPReader {
 
 	private String text;
