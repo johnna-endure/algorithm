@@ -3,7 +3,12 @@ package backjoon;
 import org.junit.Test;
 import org.junit.experimental.theories.suppliers.TestedOn;
 
+import javax.smartcardio.Card;
+import java.time.LocalTime;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
 
 public class JavaApiTest {
 	//Array.clone
@@ -44,5 +49,35 @@ public class JavaApiTest {
 		System.out.println((int)'z'-71);
 	}
 
+	@Test(timeout = 1000l)
+	public void test(){
+		Map<Integer, Card> map = new HashMap<>();
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < 500000; i++) {
+			map.put(i, new Card(i,1));
+		}
 
+		Card[] cards = map.values().toArray(new Card[500000]);
+		Arrays.sort(cards, Comparator.comparing(card -> card.number));
+	}
+
+	class Card {
+		int number, size;
+
+		public Card(int number, int size) {
+			this.number = number;
+			this.size = size;
+		}
+
+		public void increaseSize() {size++;}
+
+		@Override
+		public String toString() {
+			return "Card{" +
+					"number=" + number +
+					", size=" + size +
+					'}';
+		}
+	}
 }
+

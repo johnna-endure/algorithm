@@ -40,7 +40,6 @@ public class Main {
 
 	private static int solve(int[] trees) {
 		return getCuttingHeight(0, trees[trees.length-1], m);
-//		return 0;
 	}
 
 	public static int getCuttingHeight(int low, int high, long needWoods){
