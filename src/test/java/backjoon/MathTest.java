@@ -10,5 +10,7 @@ public class MathTest {
 	public void testSquare(){
 	    System.out.println(200000 * 200000);
 		System.out.println(-1 % 4);
+
+		System.out.println((long)(Math.pow(2, 63)*2));
 	}
 }
