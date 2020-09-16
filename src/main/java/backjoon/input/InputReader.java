@@ -23,4 +23,7 @@ public class InputReader {
 	public int readInt() throws IOException {
 		return Integer.parseInt(readLine());
 	}
+	public Long readLong() throws IOException {
+		return Long.parseLong(readLine());
+	}
 }

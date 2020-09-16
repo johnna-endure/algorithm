@@ -5,10 +5,7 @@ import org.junit.experimental.theories.suppliers.TestedOn;
 
 import javax.smartcardio.Card;
 import java.time.LocalTime;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class JavaApiTest {
 	//Array.clone
@@ -77,6 +74,17 @@ public class JavaApiTest {
 					"number=" + number +
 					", size=" + size +
 					'}';
+		}
+	}
+
+	@Test
+	public void forLoopOnSet() {
+		Set<Integer> set = new HashSet<>();
+		set.add(1);
+		set.add(2);
+
+		for (int n : set) {
+			System.out.println(n);
 		}
 	}
 }

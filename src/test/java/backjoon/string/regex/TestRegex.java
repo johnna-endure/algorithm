@@ -11,16 +11,14 @@ public class TestRegex {
 
     @Test
     public void testRegex(){
-	Pattern pattern = Pattern.compile("((100+1+)|(01))+");
-	Matcher matcher = pattern.matcher("1000011010101");
-	assertThat(matcher.matches()).isTrue();
+		String input = "55-33+22";
 
-	String s = matcher.group(1);
-	System.out.println(s);
-	System.out.println(matcher.groupCount());
+	    Pattern pattern = Pattern.compile("[0-9]+|[\\-\\+]");
+		Matcher matcher = pattern.matcher(input);
 
-	for (int i = 0; i < matcher.groupCount(); i++) {
-	    System.out.println(matcher.group(i));
-	}
+		while(matcher.find()) {
+			System.out.println(matcher.group());
+		}
     }
+
 }
