@@ -1,8 +1,23 @@
-package backjoon.input;
+package backjoon.implementation.p5338;
 
 import java.io.*;
 
-public class InputReader {
+/*
+백준 5338번 - 마이크로소프트 로고
+https://www.acmicpc.net/problem/5338
+ */
+public class Main {
+	public static void main(String[] args) {
+
+		System.out.println("       _.-;;-._");
+		System.out.println("'-..-'|   ||   |");
+		System.out.println("'-..-'|_.-;;-._|");
+		System.out.println("'-..-'|   ||   |");
+		System.out.println("'-..-'|_.-''-._|");
+	}
+}
+
+class InputReader {
 	private BufferedReader br;
 
 	public InputReader() {

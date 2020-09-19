@@ -87,5 +87,31 @@ public class JavaApiTest {
 			System.out.println(n);
 		}
 	}
+
+	@Test
+	public void randomInt() {
+		Random random = new Random();
+		for (int i = 0; i < 10; i++) {
+			System.out.println(getRandomInt(3,3));
+		}
+	}
+
+	private int getRandomInt(int start, int end) {
+		int offset = end-start;
+		Random random = new Random();
+		return random.nextInt(offset)+start;
+	}
+
+	@Test
+	public void testCallByValue(){
+	}
+
+}
+class Point {
+	int x,y;
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
 }
 
