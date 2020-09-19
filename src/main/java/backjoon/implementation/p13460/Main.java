@@ -56,7 +56,7 @@ public class Main {
 			minCnt = Math.min(findPath(nextRed, nextBlue,count+1), minCnt);
 			//위치 복귀
 			recoverPosition(red, nextRed, blue, nextBlue);
-		}우
+		}
 		return minCnt;
 	}
 	/*
