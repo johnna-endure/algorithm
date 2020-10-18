@@ -1,6 +1,5 @@
 package backjoon.string.p1032;
 
-import jdk.nashorn.internal.runtime.ListAdapter;
 
 import java.io.*;
 /*

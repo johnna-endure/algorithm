@@ -6,11 +6,21 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MathTest {
 
-	@Test
-	public void testSquare(){
-	    System.out.println(200000 * 200000);
-		System.out.println(-1 % 4);
 
-		System.out.println((long)(Math.pow(2, 63)*2));
+	@Test
+	public void testLog2(){
+		System.out.println(log2(2));
+	}
+	private static int log2(int n) {
+		if(n == 0) return 0;
+		int cnt = 0;
+		while(true) {
+			n /= 2;
+			cnt++;
+			if(n == 0) break;
+		}
+		return cnt-1;
 	}
 }
+
+
